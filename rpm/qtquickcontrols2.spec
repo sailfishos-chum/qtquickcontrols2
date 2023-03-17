@@ -14,13 +14,13 @@ Source0: %{name}-%{version}.tar.bz2
 %global __provides_exclude_from ^%{_opt_qt5_archdatadir}/qml/.*\\.so$
 
 BuildRequires: make
-BuildRequires: opt-qt5-qtbase-devel >= %{version}
+BuildRequires: opt-qt5-qtbase-devel >= %{qt_version}
 BuildRequires: opt-qt5-qtbase-private-devel
 %{?_qt5:Requires: %{_qt5}%{?_isa} = %{_qt5_version}}
 BuildRequires: opt-qt5-qtdeclarative-devel
 
-Requires: qt5-qtdeclarative%{?_isa} >= %{version}
-Requires: qt5-qtgraphicaleffects%{_isa} >= %{version}
+Requires: qt5-qtdeclarative%{?_isa} >= %{qt_version}
+Requires: qt5-qtgraphicaleffects%{_isa} >= %{qt_version}
 
 %description
 The Qt Labs Controls module provides a set of controls that can be used to
