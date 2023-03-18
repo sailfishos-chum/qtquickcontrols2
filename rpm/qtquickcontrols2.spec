@@ -37,13 +37,6 @@ Requires: opt-qt5-qtdeclarative-devel%{?_isa}
 %description devel
 %{summary}.
 
-%package examples
-Summary:        Examples for %{name}
-Requires:       %{name}%{?_isa} = %{version}-%{release}
-%description examples
-%{summary}.
-
-
 %prep
 %autosetup -n %{name}-%{version}/upstream
 
@@ -89,9 +82,6 @@ rm -f %{buildroot}%{_opt_qt5_libdir}/libQt5*.la
 %{_opt_qt5_qmldir}/Qt/labs/platform
 %{_opt_qt5_archdatadir}/qml/QtQuick/Controls.2/
 %{_opt_qt5_archdatadir}/qml/QtQuick/Templates.2/
-
-%files examples
-%{_opt_qt5_examplesdir}/quickcontrols2/
 
 %files devel
 %{_opt_qt5_headerdir}/
