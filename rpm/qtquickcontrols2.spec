@@ -48,6 +48,8 @@ Requires:       %{name}%{?_isa} = %{version}-%{release}
 %autosetup -n %{name}-%{version}/upstream
 
 %build
+export QTDIR=%{_opt_qt5_prefix}
+touch .git
 %{opt_qmake_qt5}
 
 %make_build
