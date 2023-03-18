@@ -1,6 +1,6 @@
 %global qt_version 5.15.8
 
-Name:    qt5-qtquickcontrols2
+Name:    opt-qt5-qtquickcontrols2
 Summary: Qt5 - module with set of QtQuick controls for embedded
 Version: 5.15.8
 Release: 1%{?dist}
@@ -19,8 +19,8 @@ BuildRequires: opt-qt5-qtbase-private-devel
 %{?_qt5:Requires: %{_qt5}%{?_isa} = %{_qt5_version}}
 BuildRequires: opt-qt5-qtdeclarative-devel
 
-Requires: qt5-qtdeclarative%{?_isa} >= %{qt_version}
-Requires: qt5-qtgraphicaleffects%{_isa} >= %{qt_version}
+Requires: opt-qt5-qtdeclarative%{?_isa} >= %{qt_version}
+Requires: opt-qt5-qtgraphicaleffects%{_isa} >= %{qt_version}
 
 %description
 The Qt Labs Controls module provides a set of controls that can be used to
