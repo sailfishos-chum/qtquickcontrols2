@@ -50,8 +50,11 @@ Requires:       %{name}%{?_isa} = %{version}-%{release}
 %build
 export QTDIR=%{_opt_qt5_prefix}
 touch .git
+
 %{opt_qmake_qt5}
 
+# have to restart build several times due to bug in sb2
+%make_build  -k || chmod -R ugo+r . || true
 %make_build
 
 # bug in sb2 leading to 000 permission in some generated plugins.qmltypes files
