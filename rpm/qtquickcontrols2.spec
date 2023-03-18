@@ -78,8 +78,8 @@ popd
 # Remove .la leftovers
 rm -f %{buildroot}%{_opt_qt5_libdir}/libQt5*.la
 
-
-%ldconfig_scriptlets
+%post -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %license LICENSE.LGPLv3 LICENSE.GPLv3
