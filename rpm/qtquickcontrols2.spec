@@ -65,7 +65,7 @@ make install INSTALL_ROOT=%{buildroot}
 
 ## .prl/.la file love
 # nuke .prl reference(s) to %%buildroot, excessive (.la-like) libs
-pushd %{buildroot}%{_qt5_libdir}
+pushd %{buildroot}%{_opt_qt5_libdir}
 for prl_file in libQt5*.prl ; do
   sed -i -e "/^QMAKE_PRL_BUILD_DIR/d" ${prl_file}
   if [ -f "$(basename ${prl_file} .prl).so" ]; then
@@ -76,7 +76,7 @@ done
 popd
 
 # Remove .la leftovers
-rm -f %{buildroot}%{_qt5_libdir}/libQt5*.la
+rm -f %{buildroot}%{_opt_qt5_libdir}/libQt5*.la
 
 
 %ldconfig_scriptlets
