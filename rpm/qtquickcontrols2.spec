@@ -1,8 +1,8 @@
-%global qt_version 5.15.9
+%global qt_version 5.15.10
 
 Name:    opt-qt5-qtquickcontrols2
 Summary: Qt5 - module with set of QtQuick controls for embedded
-Version: 5.15.9+kde5
+Version: 5.15.10+kde6
 Release: 1%{?dist}
 
 License: LGPL-3.0-only OR GPL-3.0-only WITH Qt-GPL-exception-1.0
